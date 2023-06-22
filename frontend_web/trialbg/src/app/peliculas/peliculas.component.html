@@ -1,0 +1,13 @@
+<p>peliculas works!</p>
+
+<div *ngIf="!detalles">
+  <div *ngFor="let movie of movies">
+    <h3>{{movie.title}}</h3>
+    <img src="{{'https://image.tmdb.org/t/p/w500/'+movie.poster_path}}" id="movie.id" width="200px" (onclick)="detallar(this.movie.id)">
+    <p>Premier in {{movie.release_date}}</p>
+    <h1>{{movie.original_language}}</h1>
+
+    <button (onclick)="detallar(this.movie.id)">Ver detalles</button>
+
+  </div>
+</div>
